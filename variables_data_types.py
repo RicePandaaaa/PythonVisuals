@@ -128,7 +128,7 @@ st.markdown("""
             """)
 
 # Quiz: Assign a value to a variable
-st.subheader("Quiz: Value assignment")
+st.subheader("Quiz: Value Assignment")
 st.markdown("""
             **Q1: Assign the value `123` to the variable `x`**
             """)
@@ -163,4 +163,151 @@ elif user_answer == "1":
     st.error("Incorrect. `a` gets assigned two more different values after the initial assignment of `1`. With the final assignment being `a = b`, `a` is assigned the value stored in `b`, which is `8`.")
 
 # Casting to a different data type
+st.header("Typecasting")
+st.markdown("""
+            We can also convert between data types using the `int()`, `float()`, and `str()` functions. This is particularly useful when we want to do something with a value that is only possible for certain data types. For example, we can use `int()` to conver a string into an integer, so we can do math.
+
+            These three functions return an entirely new value, and do not modify the original value that they are called on. For example, if we have `x = '123'` and we call `int(x)`, then `x` will still be `'123'` and the function will return `123` (the integer value of the string `'123'`).
+
+            The table below shows the possible conversions:
+            """)
+
+st.table(
+    [
+        {
+            "Function": "`str()`",
+            "Convertible Types": "`int`, `float`",
+            "Example 1": "`str(1)` = `\"1\"`",
+            "Example 2": "`str(1.0)` = `\"1.0\"`"
+        },
+        {
+            "Function": "`int()`",
+            "Convertible Types": "`float`, `str`",
+            "Example 1": "`int(1.0)` = `1`",
+            "Example 2": "`int(\"1\")` = `1`"
+        },
+        {   
+            "Function": "`float()`",
+            "Convertible Types": "`int`, `str`",
+            "Example 1": "`float(1)` = `1.0`",
+            "Example 2": "`float(\"1.0\")` = `1.0`"
+        }
+    ]
+)
+
+st.markdown("""
+            When converting a string to a number, just think about whether the value looks like a number if you remove the quotes. For example, `\"123\"` without the quotes is `123`, which is an integer. This means you can convert to both an `int` and a `float`.
+
+            When converting a `float` to an `int`, the decimal point and anything after it is removed. For example, `int(1.9999)` will return `1`. When converting any number to a string, just add quotes around the number. For example, `str(1.0)` will return `\"1.0\"`.
+            """)
+
+st.subheader("Most Common Mistake")
+st.markdown("""
+            We know that converting a `float` to an `int` will remove the decimal point and anything after it, but what happens if you try to convert a string that contains a decimal number to an `int`? An error occurs!
+
+            When you convert a string to an `int`, you need to see if the value without the quotes is an integer. For example, `\"123.45\"` without the quotes is `123.45`, which is not an integer. This means that `int(\"123.45\")` will return an error. Do not make the assumption that `int()` will also truncate the decimal point for you. You would need to convert to a `float` first and then to an `int` to get the integer part of the number. Below shows the side by side comparison of the incorrect and correct way to do this conversion.
+
+            ```python
+            # Incorrect
+            int(\"123.45\")
+
+            # Correct
+            int(float(\"123.45\"))
+            ```
+            """)
+
+st.subheader("The not as common mistake")
+st.markdown("""
+            The other mistake people do is not assigning the new value to a variable. When you convert the type, it stores the new value. However, you need to store it yourself in a variable if you want to use it later:
+
+            ```python
+            # Can't use this value later
+            str(123)
+
+            # Need to assign it to a variable
+            x = str(123)
+            ```
+
+            With that code snippet, `x` will hold onto `\"123\"`, and we can use it later.
+            """)
+
+st.subheader("Quiz: Typecasting")
+st.markdown("""
+            **Q1: What is the final value of `y`?**
+            ```python
+            x = 123
+            y = str(x)
+            ```
+            """)
+user_answer = st.radio("Choose the correct answer for Q1:", ["123", "\"123\"", "123.0", "\"123.0\""], key="typecast_q1", index=None)
+if user_answer == "\"123\"":
+    st.success("Correct! `str(123)` returns `\"123\"`.")
+elif user_answer == "123":
+    st.error("Incorrect. You are being asked for the value of `y`, not `x`.")
+elif user_answer == "123.0":
+    st.error("Incorrect. `str(123)` adds quotes around the number instead of adding the decimal point (which `float()` would do).")
+elif user_answer == "\"123.0\"":
+    st.error("Incorrect. `str(123)` only adds quotes around the number. The decimal point is only added by `float()` (and `float()` would not add the quotes).")
+
+st.markdown("""
+            **Q2: What is the final value of `z`?**
+            ```python
+            z = int(\"123.45\")
+            ```
+            """)
+user_answer = st.radio("Choose the correct answer for Q2:", ["123", "\"123.45\"", "Error","123.45"], key="typecast_q2", index=None)
+if user_answer == "Error":
+    st.success("Correct! `int(\"123.45\")` returns an error because the string contains a decimal point. \"123.45\" without the quotes is `123.45`, which is not an integer.")
+elif user_answer == "123":
+    st.error("Incorrect. `int(\"123.45\")` returns an error because the string contains a decimal point. \"123.45\" without the quotes is `123.45`, which is not an integer.")
+elif user_answer == "\"123.45\"":
+    st.error("Incorrect. `int(\"123.45\")` returns an error because the string contains a decimal point. \"123.45\" without the quotes is `123.45`, which is not an integer.")
+elif user_answer == "123.45":
+    st.error("Incorrect. `int(\"123.45\")` returns an error because the string contains a decimal point. \"123.45\" without the quotes is `123.45`, which is not an integer.")
+
+st.markdown("""
+            **Q3: What is the final value of `abc`?**
+            ```python
+            abc = float(\"123.45\")
+            ```
+            """)
+user_answer = st.radio("Choose the correct answer for Q3:", ["123", "123.45", "Error", "\"123.45\""], key="typecast_q3", index=None)
+if user_answer == "123.45":
+    st.success("Correct! `float(\"123.45\")` returns `123.45`.")
+elif user_answer == "123":
+    st.error("Incorrect. The decimal point and the numbers afterward are kept when converting to a `float`. If you casted to `int` though, you would get `123`.")
+elif user_answer == "Error":
+    st.error("Incorrect. The value within the string is a valid number, so it can be converted to a `float`.")
+elif user_answer == "\"123.45\"":
+    st.error("Incorrect. `float()` will not remove the surrouding quotes.")
+
+st.markdown("""
+            **Q4: What is the final value of `weight`?**
+            ```python
+            weight = int(123.45)
+            ```
+            """)
+user_answer = st.radio("Choose the correct answer for Q4:", ["123", "123.45", "Error", "\"123.45\""], key="typecast_q4", index=None)
+if user_answer == "123":
+    st.success("Correct! `int(123.45)` returns `123`.")
+elif user_answer == "123.45":
+    st.error("Incorrect. Casting to an `int` will remove the decimal point and anything after it.")
+elif user_answer == "Error":
+    st.error("Incorrect. The value without the quotes is a valid integer, so it can be converted to an `int`.")
+elif user_answer == "\"123.45\"":
+    st.error("Incorrect. Casting to an `int` will remove the decimal point and the following digits. Additionally, `int()` does not add any quotes.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
