@@ -1,5 +1,7 @@
 import streamlit as st
 
+# Page configuration
+st.set_page_config(page_title="Variables & Data Types", layout="wide")
 st.title("Variables and Data Types")
 
 st.markdown("---")
@@ -296,18 +298,3 @@ elif user_answer == "Error":
     st.error("Incorrect. The value without the quotes is a valid integer, so it can be converted to an `int`.")
 elif user_answer == "\"123.45\"":
     st.error("Incorrect. Casting to an `int` will remove the decimal point and the following digits. Additionally, `int()` does not add any quotes.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
