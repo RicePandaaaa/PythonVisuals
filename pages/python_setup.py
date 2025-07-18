@@ -24,3 +24,43 @@ download_checkbox = st.checkbox("Download the installer from the [official websi
 installer_checkbox = st.checkbox("Run the installer and follow the instructions.")
 path_checkbox = st.checkbox("Select the option to 'Add Python to PATH'.")
 install_checkbox = st.checkbox("Continue the installation as normal and using the default options that Python provides.")
+
+st.write("---")
+
+# IDE Setup
+st.header("IDE Setup")
+
+st.write("""
+        An IDE (Integrated Development Environment) is a software application that allows you to more easily write and test your code. For Python, there are several options to choose from:
+        """)
+
+st.subheader("IDE Options")
+st.write("""
+                 - [repl.it](https://repl.it/languages/python3)
+          - Online IDE (requires internet connection)
+          - Requires an account (sign up)
+          - Limited amount of projects without a subscription
+          - Good for fast code testing, not so good for projects/large amounts of files
+        - [VSCode](https://code.visualstudio.com/): Accessible online and offline, great as a flexible code editor, not as powerful as PyCharm
+          - Offline IDE (just install to your computer)
+          - Lightweight and fast
+          - Customizable with extensions
+          - Works for various languages, not just Python
+        - [PyCharm](https://www.jetbrains.com/pycharm/): Extremely powerful for Python, but all the Python features can be a bit overwhelming
+          - Offline IDE (just install to your computer)
+          - Powerful and feature-rich
+          - Made specifically for Python
+          - Community (free) version is slightly limited but still very powerful
+
+        My personal recommendation is VSCode. It is a very powerful code editor that is free and open source. The installation process is pretty simple, and there's a lot of personalization options with extensions. However, feel free to try all sorts of IDEs (or look at videos of people using them on YouTube) and see which one you like best.
+        """)
+
+st.subheader("Installation Guides")
+st.write("""
+        The installation guides for the three mentioned IDEs are below:
+        - [Install repl.it](https://repl.it/languages/python3)
+        - [Install VSCode](https://code.visualstudio.com/docs/setup/setup-overview)
+        - [Install PyCharm](https://www.jetbrains.com/pycharm/download/#section=windows)
+         
+        If you are using your own IDE, it should have its own installation guide online somewhere.
+        """)
