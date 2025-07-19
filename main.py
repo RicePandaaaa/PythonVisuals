@@ -6,7 +6,8 @@ st.set_page_config(page_title="Intro to Python", layout="wide")
 home_page = st.Page("pages/home.py", title="00. Home")
 setup_page = st.Page("pages/python_setup.py", title="01. Setup")
 variables_page = st.Page("pages/variables_data_types.py", title="02. Variables & Data Types")
+basic_output_page = st.Page("pages/basic_output.py", title="03. Basic Output")
 
 # Navigation with custom titles
-pg = st.navigation([home_page, setup_page, variables_page])
+pg = st.navigation([home_page, setup_page, variables_page, basic_output_page])
 pg.run()
