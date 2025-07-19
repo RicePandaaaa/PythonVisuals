@@ -159,4 +159,17 @@ st.markdown("""
             F-strings are a powerful way to print values, and are often used in Python code.
             """)
 
-# Ask about f-strings
+# Quick question about f-string syntax
+st.subheader("Quiz: f-string syntax")
+st.markdown("""
+            **Q1: What are the two parts of an f-string?**
+            """)
+user_answer = st.radio("Choose the correct answer for Q1:", ["`f` and the curly braces", "`f` and a variable name", "curly braces and a variable name"], key="print_q6", index=None)
+if user_answer == "`f` and the curly braces":
+    st.success("Correct! The `f` is the prefix, and the curly braces are used to embed any value.")
+elif user_answer == "`f` and a variable name":
+    st.error("Incorrect. The variable name is actually not needed since any value can be embedded. However, the curly braces are needed to show where the value is embedded.")
+elif user_answer == "curly braces and a variable name":
+    st.error("Incorrect. The variable name is actually not needed since any value can be embedded. However, `f` prefix is needed to tell Python that this is an f-string.")
+
+st.markdown("---")
