@@ -1,4 +1,4 @@
-# PythonVisuals
+# TonyIntroToPython
 
 This is a mini-textbook of sorts that is meant to be a nice introduction to basic Python! 
 
