@@ -14,6 +14,7 @@ st.markdown("""
             - 02\. Variables and Data Types
             - 03\. Basic Output
             - 04\. Basic Math Operations
+            - 05\. User Input
             """,)
 
 st.markdown("---")
