@@ -173,3 +173,88 @@ elif user_answer == "curly braces and a variable name":
     st.error("Incorrect. The variable name is actually not needed since any value can be embedded. However, `f` prefix is needed to tell Python that this is an f-string.")
 
 st.markdown("---")
+
+# Formatting the f-string insertions
+st.header("Formatting the f-string insertions")
+st.markdown("""
+            What if you wanted to control how the value is embedded in the string? For example, what if you wanted to print a number with a certain number of decimal places? Or what if you wanted to ensure a certain alignment or spacing of a string?
+
+            The `:` character helps define different formatting options for the value directly before it. The table below shows some of the most common formatting options:
+            """)
+st.table([
+    {
+        "Format": "`:,d`",
+        "Description": "Adds commas to the number (integers only). `d` is the format specifier for integers. Can be used with the `f` specifier to format floats."
+    },
+    {
+        "Format": "`:.yf`",
+        "Description": "Force `y` decimal places. If there are too many, round to `y` decimal places. If there are too few, add zeros to the right. `f` is the format specifier for floats."
+    },
+    {
+        "Format": "`:a<b`",
+        "Description": "Left-align the number, output with at least `b` characters. Replace `<` with `^` to center the text or `>` to right-align the text. Replace `a` to change which character is used to fill the space. Remove `a` just to use blank space as the filler. The alignment option though can be applied to both numbers and strings."
+    }
+])
+st.markdown("""
+            There are many more formatting options available, but these are the most common ones. You can find a full list of formatting options [here](https://docs.python.org/3/library/string.html#format-specification-mini-language). The three shown are the three that I believe are the most useful right away. For example, you can use `:,"` just to add commas to a number (e.g. `100000` becomes `100,000`). Feel free to experiment with all the formatting options for your needs!
+
+            Note that the value to be formatted is placed immediately before the `:` character. For example, if we have `print(f"{100000:,}")`, the output will be `100,000`. Instead of some quiz questions, play with the code below to see how the formatting options work:
+            """)
+
+# Example for formatting a string
+# Align left, center, or right
+st.subheader("String alignment example")
+alignment = st.radio("Choose which alignment you want to use:", ["Left", "Center", "Right"], key="print_q7")
+size = st.slider("Choose the size of the text:", min_value=1, max_value=10, value=5, step=1, key="print_q8")
+filler = st.text_input("Choose the filler character (hit Enter to apply):", value=" ", key="print_q9")
+
+# Convert filler choice to format symbol
+if len(filler) > 1:
+    filler = filler[0]
+    st.error("Only the first character of the filler will be used as the filler character can only be one character.")
+elif len(filler) == 0:
+    filler = " "
+
+# Convert alignment choice to format symbol
+if alignment:
+    align_symbol = {"Left": "<", "Center": "^", "Right": ">"}[alignment]
+
+# Code block
+st.markdown("**Code:**")
+st.markdown(f"""
+            ```python
+            print(f"{{'abc':{filler}{align_symbol}{size}s}}")
+            ```
+            """)
+st.markdown("**Output:**")
+st.code(f"{'abc':{filler}{align_symbol}{size}s}")
+
+# Example for adding commas to a number
+st.subheader("Adding commas to a number")
+number_of_zeros = st.slider("Enter the number of zeros to add:", min_value=0, max_value=10, value=4, step=1, key="print_q10")
+
+# Code block
+st.markdown("**Code:**")
+st.markdown(f"""
+            ```python
+            print(f"{{{int("1" + "0" * number_of_zeros)}:,d}}")
+            ```
+            """)
+st.markdown("**Output:**")
+st.code(f"{int('1' + '0' * number_of_zeros):,d}")
+
+# Example for formatting a float
+st.subheader("Formatting a float")
+number_of_decimals = st.slider("Enter the number of decimal places to show:", min_value=0, max_value=10, value=2, step=1, key="print_q11")
+
+# Code block
+st.markdown("**Code:**")
+st.markdown(f"""
+            ```python
+            from math import pi
+            print(f"{{pi:.{number_of_decimals}f}}")
+            ```
+            """)
+st.markdown("**Output:**")
+from math import pi
+st.code(f"{pi:.{number_of_decimals}f}")
