@@ -15,6 +15,7 @@ st.markdown("""
             - 03\. Basic Output
             - 04\. Basic Math Operations
             - 05\. User Input
+            - 06\. Planning and Design
             """,)
 
 st.markdown("---")
