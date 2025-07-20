@@ -10,7 +10,8 @@ basic_output_page = st.Page("pages/basic_output.py", title="03. Basic Output")
 basic_math_page = st.Page("pages/basic_math.py", title="04. Basic Math Operations")
 user_input_page = st.Page("pages/user_input.py", title="05. User Input")
 planning_design_page = st.Page("pages/planning_and_design.py", title="06. Planning & Design")
+conditionals_page = st.Page("pages/conditionals.py", title="07. Conditionals")
 
 # Navigation with custom titles
-pg = st.navigation([home_page, setup_page, variables_page, basic_output_page, basic_math_page, user_input_page, planning_design_page])
+pg = st.navigation([home_page, setup_page, variables_page, basic_output_page, basic_math_page, user_input_page, planning_design_page, conditionals_page])
 pg.run()

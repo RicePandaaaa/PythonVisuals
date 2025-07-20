@@ -185,5 +185,5 @@ elif len(user_answer) > 0:
     st.error("Incorrect! Remember, the `*` sign is used to repeat a string a certain amount of times. The result in this case is `AlanaAlanaAlana`.")
 
 st.markdown("---")
-st.caption("© 2025 Anthony Ha-Anh Pham | Licensed under [GNU GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.html) | View source code on [GitHub](https://github.com/RicePandaaaa/PythonVisuals)")
+st.caption("© 2025 Anthony Ha-Anh Pham | Licensed under [GNU GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.html) | View source code on [GitHub](https://github.com/RicePandaaaa/TonyIntroToPython)")
 
