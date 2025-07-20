@@ -12,5 +12,10 @@ st.markdown("""
             - 00\. Home
             - 01\. Setup
             - 02\. Variables and Data Types
+            - 03\. Basic Output
+            - 04\. Basic Math Operations
             """,)
+
+st.markdown("---")
+st.caption("© 2025 Anthony Ha-Anh Pham | Licensed under [GNU GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.html) | View source code on [GitHub](https://github.com/RicePandaaaa/PythonVisuals)")
 

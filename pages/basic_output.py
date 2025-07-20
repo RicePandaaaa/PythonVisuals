@@ -258,3 +258,6 @@ st.markdown(f"""
 st.markdown("**Output:**")
 from math import pi
 st.code(f"{pi:.{number_of_decimals}f}")
+
+st.markdown("---")
+st.caption("© 2025 Anthony Ha-Anh Pham | Licensed under [GNU GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.html) | View source code on [GitHub](https://github.com/RicePandaaaa/PythonVisuals)")

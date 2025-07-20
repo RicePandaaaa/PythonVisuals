@@ -298,3 +298,7 @@ elif user_answer == "Error":
     st.error("Incorrect. The value without the quotes is a valid integer, so it can be converted to an `int`.")
 elif user_answer == "\"123.45\"":
     st.error("Incorrect. Casting to an `int` will remove the decimal point and the following digits. Additionally, `int()` does not add any quotes.")
+
+
+st.markdown("---")
+st.caption("© 2025 Anthony Ha-Anh Pham | Licensed under [GNU GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.html) | View source code on [GitHub](https://github.com/RicePandaaaa/PythonVisuals)")
