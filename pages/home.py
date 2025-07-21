@@ -17,6 +17,7 @@ st.markdown("""
             - 05\. User Input
             - 06\. Planning and Design
             - 07\. Conditionals
+            - 08\. Packages, Modules, and Functions
             """,)
 st.markdown("---")
 

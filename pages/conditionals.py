@@ -477,6 +477,4 @@ elif user_answer == "3":
     st.error("Incorrect. The condition for the first `if` statement is `True`, so that `else` is skipped, and thus the third `print()` statement is not executed. `a > 10` is `True` and `b > 5` is `False`, so the second `print()` statement is executed instead.")
 
 st.markdown("---")
-
-st.markdown("---")
 st.caption("© 2025 Anthony Ha-Anh Pham | Licensed under [GNU GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.html) | View source code on [GitHub](https://github.com/RicePandaaaa/TonyIntroToPython)")
