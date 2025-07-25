@@ -65,7 +65,7 @@ st.markdown("""
 
 # Create a table of examples of strings
 st.markdown("""
-            Here are some examples of valid and invalid`str` values:
+            Here are some examples of valid and invalid `str` values:
             """)
 st.table([
     {"Valid": "\"Hello, world!\"", "Invalid": "\'Hello, world!\""},
@@ -163,6 +163,30 @@ elif user_answer == "7":
     st.error("Incorrect. `a` was assigned a different value two lines after with `a = b`. This means that `a` is now assigned the value `8` since `b` is 8 at the time of that assignment.")
 elif user_answer == "1":
     st.error("Incorrect. `a` gets assigned two more different values after the initial assignment of `1`. With the final assignment being `a = b`, `a` is assigned the value stored in `b`, which is `8`.")
+st.markdown("---")
+
+# Naming conventions
+st.header("Naming conventions")
+st.markdown("""
+            When naming variables, there are some rules to follow to avoid errors and confusion with either Python or other programmers. Some "rules" are stylistic in nature: they just follow what other programmers done have for a while, and it helps make your code more readable. Other rules however are extremely strict and will cause errors or very unexpected behaviors if not followed.
+            """)
+
+st.markdown("---")
+
+# Hard rules
+st.header("Hard rules")
+st.markdown("""
+            As previously said, some rules, if ignored, will cause errors or very unexpected behaviors. These are the hard rules that you must follow:
+
+            - Variable names can **only** contain letters, numbers, and underscores (`_`)
+            - Variable names cannot start with a number
+            - Variable names cannot be the same as a Python keyword
+            - Variable names cannot be the same as a built-in function name
+
+            That above list is not *entirely* exhaustive, but it works well enough. If you are unsure about whether a variable name is valid, you can always check the [Python documentation](https://docs.python.org/3/reference/lexical_analysis.html#identifiers).
+            """)
+
+
 
 # Casting to a different data type
 st.header("Typecasting")
