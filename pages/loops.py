@@ -32,6 +32,8 @@ st.markdown("""
             `sequence` is the sequence you want to iterate over. It can be a string, but for now, it's most common to be a `range()`. `in` is just required to be there. Don't worry too much about what exactly it does, just know that it's required.
             """)
 
+st.markdown("---")
+
 st.subheader("`range()`")
 
 st.markdown("""
@@ -85,7 +87,7 @@ st.subheader("Quiz: `for` loop basics")
 st.markdown("""
             **Q1:** What keyword is used for a `for` loop?
             """)
-user_answer = st.text_input("Enter your answer:")
+user_answer = st.text_input("Enter your answer:", key="for_loop_q1")
 
 if user_answer.lower() == "for":
     st.success("Correct!")
@@ -104,7 +106,7 @@ st.markdown("""
 st.markdown("""
             **Q2:** What is the loop variable in the code above?
             """)
-user_answer = st.text_input("Enter your answer:")
+user_answer = st.text_input("Enter your answer:", key="for_loop_q2")
 
 if user_answer == "i":
     st.success("Correct!")
@@ -114,7 +116,7 @@ elif len(user_answer) > 0:
 st.markdown("""
             **Q3:** How many lines of output will there be?
             """)
-user_answer = st.text_input("Enter your answer:")
+user_answer = st.text_input("Enter your answer:", key="for_loop_q3")
 
 if user_answer == "5":
     st.success("Correct!")
@@ -150,7 +152,7 @@ st.subheader("Quiz: `range()` combinations")
 st.markdown("""
             **Q1:** If you provide just one number to `range()`, what parameter does the number correspond to?
             """)
-user_answer = st.text_input("Enter your answer:")
+user_answer = st.text_input("Enter your answer:", key="range_q1")
 
 if user_answer.lower() == "stop":
     st.success("Correct!")
@@ -160,7 +162,7 @@ elif len(user_answer) > 0:
 st.markdown("""
             **Q2:** If you provide two numbers to `range()`, what parameters do the numbers correspond to?
             """)
-user_answer = st.radio("Answers:", ["start, stop", "stop, step", "start, step"])
+user_answer = st.radio("Answers:", ["start, stop", "stop, step", "start, step"], key="range_q2", index=None)
 
 if user_answer == "start, stop":
     st.success("Correct! The first number corresponds to the `start` parameter, and the second number corresponds to the `stop` parameter.")
@@ -170,7 +172,7 @@ elif user_answer is not None:
 st.markdown("""
             **Q3:** If `start > stop`, then `step` must be what?
             """)
-user_answer = st.radio("Answers:", ["positive", "negative", "zero"])
+user_answer = st.radio("Answers:", ["positive", "negative", "zero"], key="range_q3", index=None)
 
 if user_answer == "negative":
     st.success("Correct! If `start > stop`, then `step` must be negative! This allows the sequence to start at the higher number (`start`) and decreases over time until it reaches the lower number (`stop`).")
@@ -180,7 +182,7 @@ elif user_answer is not None:
 st.markdown("""
             **Q4:** If `start < stop`, then `step` must be what?
             """)
-user_answer = st.radio("Answers:", ["positive", "negative", "zero"])
+user_answer = st.radio("Answers:", ["positive", "negative", "zero"], key="range_q4", index=None)
 
 if user_answer == "positive":
     st.success("Correct! If `start < stop`, then `step` must be positive! This allows the sequence to start at the lower number (`start`) and increases over time until it reaches the higher number (`stop`).")
