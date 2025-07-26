@@ -171,10 +171,8 @@ st.markdown("""
             When naming variables, there are some rules to follow to avoid errors and confusion with either Python or other programmers. Some "rules" are stylistic in nature: they just follow what other programmers done have for a while, and it helps make your code more readable. Other rules however are extremely strict and will cause errors or very unexpected behaviors if not followed.
             """)
 
-st.markdown("---")
-
 # Hard rules
-st.header("Hard rules")
+st.subheader("Hard rules")
 st.markdown("""
             As previously said, some rules, if ignored, will cause errors or very unexpected behaviors. These are the hard rules that you must follow:
 
@@ -186,7 +184,39 @@ st.markdown("""
             That above list is not *entirely* exhaustive, but it works well enough. If you are unsure about whether a variable name is valid, you can always check the [Python documentation](https://docs.python.org/3/reference/lexical_analysis.html#identifiers).
             """)
 
+# Soft rules
+st.subheader("Soft rules")
+st.markdown("""
+            These rules are more like guidelines. They are not enforced by Python, but it is a good idea to follow them to make your code more readable.
 
+            - Variable names should be in lowercase
+            - Variable names should be short and concise
+            - Variable names for constant values should be in all caps
+            - Be consistent in how spacing is used:
+              - Either use underscores (e.g. `my_variable`)
+              - Or use camel case (e.g. `myVariable`)
+            
+            There are other rules, but these are the most obvious ones.
+            """)
+
+# Quiz on valid variable names
+st.subheader("Quiz: Valid variable names")
+st.markdown("""
+            **Q1: Choose the valid variable name:**
+            """)
+user_answer = st.radio("Answers:", ["123", "my_variable", "my.Variable", "my-variable", "my variable"], key="var_name_q1", index=None)
+if user_answer == "my_variable":
+    st.success("Correct! `my_variable` is a valid variable name because it contains only letters, numbers, and underscores, and does not start with a number.")
+elif user_answer == "123":
+    st.error("Incorrect. `123` is not a valid variable name because it starts with a number.")
+elif user_answer == "my.Variable":
+    st.error("Incorrect. `my.Variable` is not a valid variable name because it contains a period. Remember, no punctuation is allowed other than underscores!")
+elif user_answer == "my-variable":
+    st.error("Incorrect. `my-variable` is not a valid variable name because it contains a hyphen. Remember, no punctuation is allowed other than underscores!")
+elif user_answer == "my variable":
+    st.error("Incorrect. `my variable` is not a valid variable name because it contains a space. Remember, no spaces are allowed in variable names!")
+
+st.markdown("---")
 
 # Casting to a different data type
 st.header("Typecasting")
