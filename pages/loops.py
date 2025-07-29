@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("Loops")
+st.title("9: Loops")
 
 st.markdown("""
             Loops are a fundamental concept in programming. They allow you to repeat a block of code multiple times. There are two types of loops in Python: `for` loops and `while` loops.
@@ -14,7 +14,9 @@ st.markdown("""
 
 st.markdown("---")
 
-st.subheader("`for` loops")
+st.subheader("9.1: `for` loops")
+
+st.subheader("9.1.1: Overview")
 
 st.markdown("""
             `for` loops are used to iterate over a sequence (e.g. a string) and execute a block of code for each item in the sequence.
@@ -34,7 +36,7 @@ st.markdown("""
 
 st.markdown("---")
 
-st.subheader("`range()`")
+st.subheader("9.1.2: `range()`")
 
 st.markdown("""
             `range()` is a built-in function that returns a sequence of numbers. It is commonly used in `for` loops.
@@ -125,7 +127,7 @@ elif len(user_answer) > 0:
 
 st.markdown("---")
 
-st.subheader("Advanced `range()` usages")
+st.subheader("9.1.3: Advanced `range()` usages")
 
 st.markdown("""
             `range()` can be defined using just two numbers, the `start` and `stop`. The `step` defaults to 1. For example, `range(10, 20)` will return `[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]`. This isn't exactly very advanced, but it's good to know that you can provide one, two, or all three numbers to `range()`.
@@ -190,3 +192,72 @@ elif user_answer is not None:
     st.error("Incorrect. If `start < stop`, then `step` must be positive! This allows the sequence to start at the lower number (`start`) and increases over time until it reaches the higher number (`stop`).")
 
 st.markdown("---")
+
+st.subheader("9.2: `while` loops")
+
+st.subheader("9.2.1: Overview")
+st.markdown("""
+            `while` loops are used to execute a block of code repeatedly while a condition is met.
+
+            The general syntax of a `while` loop is:
+            ```python
+            while condition:
+                # code to execute while the condition is true
+            ```
+
+            The only `keyword` here is `while`, and the condition just needs to be evaluable to a boolean value. Some times, people want a `while` loop to run forever, so they just use `True` as the condition. There are ways around this, but that is just to make the point that as long Python can evaluate that condition to either `True` or `False`, the loop is legal. Do note that although `while` loops are known to have an unknown amount of iterations, there are times you can still determine the number of iterations:
+
+            ```python
+            i = 0
+            while i < 10:
+                print(i)
+                i += 1
+            ```
+
+            When it is said that `while` loops do not have a fixed number of iterations, this is due to the unpredictablity of the conditions used *in general*. It does not mean you can *never* determine the number of iterations. Some loop usages, such as the one shown above, give enough context to determine the number of iterations. That being said, you should be using a `for` loop if you *already* know the number of iterations itself. If you know *when* the loop should be running instead of *how many times* it should be running, then a `while` loop is the way to go.
+            """)
+
+# Quiz about `while` loops
+st.subheader("Quiz: `while` loops")
+
+st.markdown("""
+            **Q1:** What keyword is used for a `while` loop?
+            """)
+user_answer = st.text_input("Enter your answer:", key="while_loop_q1")
+if user_answer.lower() == "while":
+    st.success("Correct!")
+elif len(user_answer) > 0:
+    st.error("Incorrect. `while` is the keyword used.")
+
+st.markdown("""
+            **Q2:** What is the condition in the code below?
+            ```python
+            i = 0
+            while i < 10:
+                print(i)
+                i += 1
+            ```
+            """)
+user_answer = st.text_input("Enter your answer:", key="while_loop_q2")
+if len(user_answer) > 0 and "".join(user_answer.split()).lower() == "i<10":
+    st.success("Correct!")
+elif len(user_answer) > 0:
+    st.error("Incorrect. The condition is `i < 10`.")
+
+st.markdown("""
+            **Q3:** Is this an infinite loop?
+            ```python
+            while True:
+                print("Hi")
+            ```
+            """)
+user_answer = st.radio("Answers:", ["Yes", "No"], key="while_loop_q3", index=None)
+if user_answer == "Yes":
+    st.success("Correct! The loop will run forever because the condition is always `True`.")
+elif user_answer is not None:
+    st.error("Incorrect. The loop will run forever because the condition is always `True`.")
+
+st.markdown("---")
+
+st.markdown("---")
+st.caption("© 2025 Anthony Ha-Anh Pham | Licensed under [GNU GPL 3.0](https://www.gnu.org/licenses/gpl-3.0.html) | View source code on [GitHub](https://github.com/RicePandaaaa/TonyIntroToPython)")
