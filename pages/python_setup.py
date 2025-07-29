@@ -1,11 +1,11 @@
 import streamlit as st
 
-st.title("Setup")
+st.title("1: Setup")
 
 st.write("---")
 
 # Python Installation
-st.header("Python Installation")
+st.header("1.1: Python Installation")
 
 st.write("""
         Python is a popular programming language that is easy to learn and use. It is a general-purpose language that can be used for a wide range of applications.
@@ -28,13 +28,13 @@ install_checkbox = st.checkbox("Continue the installation as normal and using th
 st.write("---")
 
 # IDE Setup
-st.header("IDE Setup")
+st.header("1.2: IDE Setup")
 
 st.write("""
         An IDE (Integrated Development Environment) is a software application that allows you to more easily write and test your code. For Python, there are several options to choose from:
         """)
 
-st.subheader("IDE Options")
+st.subheader("1.2.1: IDE Options")
 st.write("""
                  - [repl.it](https://repl.it/languages/python3)
           - Online IDE (requires internet connection)
@@ -55,7 +55,7 @@ st.write("""
         My personal recommendation is VSCode. It is a very powerful code editor that is free and open source. The installation process is pretty simple, and there's a lot of personalization options with extensions. However, feel free to try all sorts of IDEs (or look at videos of people using them on YouTube) and see which one you like best.
         """)
 
-st.subheader("Installation Guides")
+st.subheader("1.2.2: Installation Guides")
 st.write("""
         The installation guides for the three mentioned IDEs are below:
         - [Install repl.it](https://repl.it/languages/python3)

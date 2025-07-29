@@ -1,9 +1,9 @@
 import streamlit as st
 
-st.title("User Input")
+st.title("5: User Input")
 
 # User input
-st.header("Introduction")
+st.header("5.1: Introduction")
 st.markdown("""
             A lot of programs require the user to input information. For example, a calculator requires the user to input the numbers they want to calculate. A game requires the user to input the moves they want to make. A website requires the user to input the information they want to store.
 
@@ -13,7 +13,7 @@ st.markdown("""
 st.markdown("---")
 
 # Using input()
-st.header("Using `input()`")
+st.header("5.2: Using `input()`")
 st.markdown("""
             The `input()` function is used to get user input from the terminal. It takes an optional string as an argument, which is the prompt that will be displayed to the user. It returns a string of the user's input.
 
@@ -51,7 +51,7 @@ elif user_answer is not None:
 st.markdown("---")
 
 # Using input() with a prompt
-st.header("Typecasting")
+st.header("5.3: Typecasting")
 st.markdown("""
             Typecasting was already covered in "Variables & Data Types". However, it is important to note that the `input()` function returns a string. This means that if you want to do math with the user's input, you will need to convert it to a number first. If they type in nothing but hit Enter anyways, the input will be an empty string. If you know that the user will always type in a number, you can use the `int()` or `float()` function to convert the input to a number:
 

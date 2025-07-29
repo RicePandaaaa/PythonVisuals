@@ -2,12 +2,12 @@ import streamlit as st
 
 # Page configuration
 st.set_page_config(page_title="Variables & Data Types", layout="wide")
-st.title("Variables and Data Types")
+st.title("2: Variables and Data Types")
 
 st.markdown("---")
 
 # Introduction
-st.header("Introduction")
+st.header("2.1: Introduction")
 st.markdown("""
             A variable is what we use to store information in a program. If the information can be represented as some sort of tangible value or object (e.g. a number or some text), then we can store in a variable. For Python to understand the information being stored, it has specific data types that it can work with. The core three are `int`, `float`, and `str`.
             """)
@@ -15,7 +15,7 @@ st.markdown("""
 st.markdown("---")
 
 # Number data types
-st.header("Number data types")
+st.header("2.2: Number data types")
 st.markdown("""
             `int` and `float` are used to store numbers. `int` is used to store **int**eger values, while `float` is used to store **float**ing point values (decimal numbers). An example of an `int` is `1`, while an example of a `float` is `1.5`. Note that as long as the number has a decimal point, it will be stored as a `float`, even if the number itself could be rewritten as an `int` (e.g. `1.0` is a `float` even though 1 does not inherently have a fractional part).
             """)
@@ -53,7 +53,7 @@ elif user_answer == "float":
 st.markdown("---")
 
 # String data type
-st.header("String data type")
+st.header("2.3: String data type")
 st.markdown("""
             `str` is used to store **string** values. A string is a sequence of characters. An example of a `str` is `"Hello, world!"`. Notice the use of quotes to indicate that the value is a string. These quotes are not part of the string itself, but are used to indicate that the value is a string. Without these quotes, Python would think you are typing some code instead. Also notice that the quotes can be single or double quotes, but they must be consistent (i.e. the string must be enclosed in the same type of quotes).
             """)
@@ -117,7 +117,7 @@ elif user_answer == "Yes":
 st.markdown("---")
 
 # Variable assignment
-st.header("Variable Assignment")
+st.header("2.4: Variable Assignment")
 st.markdown("""
             To store these values in a variable, the variable needs to be created and assigned. The syntax for this is:
             ```python
@@ -166,13 +166,13 @@ elif user_answer == "1":
 st.markdown("---")
 
 # Naming conventions
-st.header("Naming conventions")
+st.header("2.5: Naming conventions")
 st.markdown("""
             When naming variables, there are some rules to follow to avoid errors and confusion with either Python or other programmers. Some "rules" are stylistic in nature: they just follow what other programmers done have for a while, and it helps make your code more readable. Other rules however are extremely strict and will cause errors or very unexpected behaviors if not followed.
             """)
 
 # Hard rules
-st.subheader("Hard rules")
+st.subheader("2.5.1: Hard rules")
 st.markdown("""
             As previously said, some rules, if ignored, will cause errors or very unexpected behaviors. These are the hard rules that you must follow:
 
@@ -185,7 +185,7 @@ st.markdown("""
             """)
 
 # Soft rules
-st.subheader("Soft rules")
+st.subheader("2.5.2: Soft rules")
 st.markdown("""
             These rules are more like guidelines. They are not enforced by Python, but it is a good idea to follow them to make your code more readable.
 
@@ -219,7 +219,7 @@ elif user_answer == "my variable":
 st.markdown("---")
 
 # Casting to a different data type
-st.header("Typecasting")
+st.header("2.6: Typecasting")
 st.markdown("""
             We can also convert between data types using the `int()`, `float()`, and `str()` functions. This is particularly useful when we want to do something with a value that is only possible for certain data types. For example, we can use `int()` to conver a string into an integer, so we can do math.
 
@@ -257,7 +257,7 @@ st.markdown("""
             When converting a `float` to an `int`, the decimal point and anything after it is removed. For example, `int(1.9999)` will return `1`. When converting any number to a string, just add quotes around the number. For example, `str(1.0)` will return `\"1.0\"`.
             """)
 
-st.subheader("Most Common Mistake")
+st.subheader("2.6.1: Most Common Mistake")
 st.markdown("""
             We know that converting a `float` to an `int` will remove the decimal point and anything after it, but what happens if you try to convert a string that contains a decimal number to an `int`? An error occurs!
 
@@ -272,7 +272,7 @@ st.markdown("""
             ```
             """)
 
-st.subheader("The not as common mistake")
+st.subheader("2.6.2: The not as common mistake")
 st.markdown("""
             The other mistake people do is not assigning the new value to a variable. When you convert the type, it stores the new value. However, you need to store it yourself in a variable if you want to use it later:
 

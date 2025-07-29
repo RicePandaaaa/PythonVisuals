@@ -1,17 +1,17 @@
 import streamlit as st
 
-st.title("Conditionals")
+st.title("7: Conditionals")
 st.markdown("---")
 
 # Introduction
-st.header("Introduction")
+st.header("7.1: Introduction")
 st.markdown("""
             We make decisions in our lives every day. By considering certain pieces of information, we can determine what course of action to take. In programming, we can have Python also make decisions based on whether certain conditions are met or not met. Fundamentally, conditionals are all about whether something is `True` or `False`. There is no risk assessment or any probability involved. We may take the *best* course of action, even if some of the conditions are not entirely met. However, Python will only take certain actions if *all* the given conditions are met.
             """)
 st.markdown("---")
 
 # Boolean data type
-st.header("Boolean Data Type")
+st.header("7.2: Boolean Data Type")
 st.markdown("""
             Booleans represent the truth values `True` and `False`. These values mean exactly what they say: `True` means that something is true, and `False` means that something is false. Generally, you never directly use `True` or `False` in your code. Instead, you use conditional statements that evaluate to either `True` or `False`.
 
@@ -20,7 +20,7 @@ st.markdown("""
 st.markdown("---")
 
 # If statement
-st.header("`if`")
+st.header("7.3: `if`")
 st.markdown("""
             This keyword is used to make conditional statements, and what can be referred to as a code block. A code block is a group of code that is executed together as part of a particular statement. In this case, the code block is the code that is executed if the immediate condition above it is `True`. That code will never execute on any other condition.
 
@@ -85,7 +85,7 @@ elif user_answer is not None:
 st.markdown("---")
 
 # Relational operators
-st.header("Relational Operators")
+st.header("7.4: Relational Operators")
 st.markdown("""
             Relational operators are used to compare two values. The result of a relational operator is a boolean value. The table below shows the relational operators and their results.
             """)
@@ -132,7 +132,7 @@ st.markdown("""
             """)
 
 # Code example for relational operators
-st.subheader("Code example: Relational operators")
+st.subheader("7.4.1: Code example: Relational operators")
 operator = st.radio("Choose the operator:", ["`==`", "`!=`", "`>`", "`<`", "`>=`", "`<=`"], key="rel_op", index=0)
 if operator is not None:
     operator = operator[1:-1]
@@ -170,7 +170,7 @@ if operator is not None:
 st.markdown("---")
 
 # Chaining conditionals
-st.header("`and` and `or`")
+st.header("7.5: `and` and `or`")
 st.markdown("""
             Sometimes, you want to check if all conditions are met or if just one of the conditions are met (or just some of the conditions are met). This is where the `and` and `or` keywords come in.
 
@@ -230,7 +230,7 @@ st.markdown("""
             Note that `and` is `True` only if both conditions are `True`, and `or` is `False` only if both conditions are `False`. This is a neat way to remember quickly what the result of `and` or `or` should be. If any condition is `False`, the result of `and` is `False`, and if any condition is `True`, the result of `or` is `True`.
             """)
 
-st.subheader("Multiple `and`, `or`, and relational operators")
+st.subheader("7.5.1: Multiple `and`, `or`, and relational operators")
 st.markdown("""
             You can also use multiple `and` and `or` operators in a single statement. Note that `and` is evaluated before `or`. But usually, you use parentheses to group pairs of conditions together to avoid ambiguity or relying on the reader to memorize the order of operations. Example:
 
@@ -299,7 +299,7 @@ elif user_answer == "No":
     st.error("Incorrect. You can use `and` and `or` to chain together multiple conditions.")
 
 
-st.subheader("Smart `and` and `or`")
+st.subheader("7.5.2: Smart `and` and `or`")
 st.markdown("""
             This is a rarely used feature, but Python is actually incredibly smart with how it evaluates `and` and `or` statements.
 
@@ -328,7 +328,7 @@ st.markdown("""
 st.markdown("---")
 
 # elif and else
-st.header("`elif` and `else`")
+st.header("7.6: `elif` and `else`")
 st.markdown("""
             What if we want to Python to have different options of what to do based on different conditions? This is where `elif` and `else` come in.
 
@@ -421,7 +421,7 @@ elif user_answer is not None:
 st.markdown("---")
 
 # Nested conditionals
-st.header("Nested Conditionals")
+st.header("7.7: Nested Conditionals")
 st.markdown("""
             Sometimes, you have more decisions to make after checking one condition. This is where nested conditionals come in. Nested conditionals are conditionals that are inside other conditionals. There is nothing really special about them other than the indentation:
 

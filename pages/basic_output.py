@@ -1,11 +1,11 @@
 import streamlit as st
 
-st.title("Basic Output")
+st.title("3: Basic Output")
 
 st.markdown("---")
 
 # Printing to the console
-st.header("Printing to the console")
+st.header("3.1: Printing to the console")
 st.markdown("""
             The most basic way to output information is to use the `print()` function. Whenever you run a Python script, a terminal window will open up. This terminal is how Python executes your code and also displays certain outputs. `print()` is Python's primary way to output information to this terminal (also called the console).
 
@@ -47,9 +47,9 @@ elif user_answer == "\'123\'":
 st.markdown("---")
 
 # Printing multiple values
-st.header("Printing multiple values")
+st.header("3.2: Printing multiple values")
 
-st.subheader("Adding multiple values in a single `print()`")
+st.subheader("3.2.1: Adding multiple values in a single `print()`")
 st.markdown("""
             What if you wanted to `print` multiple values (usually mutliple variables) out at the same time? Writing out one `print()` for each value would be tedious and inefficient. Instead, you can use a comma to separate the values you want to print within the `print()` function:
 
@@ -88,7 +88,7 @@ elif user_answer == "\'123\' 456":
 st.markdown("---")
 
 # Extra parameters for print()
-st.header("Adjusting `print()` behavior")
+st.header("3.3: Adjusting `print()` behavior")
 st.markdown("""
             The `print()` function has a few extra parameters that can be used to adjust its behavior. These parameters are optional, and can be used to modify the default behavior of `print()`.
 
@@ -138,7 +138,7 @@ elif user_answer == "2":
 st.markdown("---")
 
 # f-strings
-st.header("f-strings")
+st.header("3.4: f-strings")
 
 st.markdown("""
             So far, we've been printing values by inserting them directly into the `print()` function. However, this is not the only way to print values. We can also use f-strings to print values.
@@ -175,7 +175,7 @@ elif user_answer == "curly braces and a variable name":
 st.markdown("---")
 
 # Formatting the f-string insertions
-st.header("Formatting the f-string insertions")
+st.header("3.5: Formatting the f-string insertions")
 st.markdown("""
             What if you wanted to control how the value is embedded in the string? For example, what if you wanted to print a number with a certain number of decimal places? Or what if you wanted to ensure a certain alignment or spacing of a string?
 
@@ -230,7 +230,7 @@ st.markdown("**Output:**")
 st.code(f"{'abc':{filler}{align_symbol}{size}s}")
 
 # Example for adding commas to a number
-st.subheader("Adding commas to a number")
+st.subheader("3.5.1: Adding commas to a number")
 number_of_zeros = st.slider("Enter the number of zeros to add:", min_value=0, max_value=10, value=4, step=1, key="print_q10")
 
 # Code block
@@ -244,7 +244,7 @@ st.markdown("**Output:**")
 st.code(f"{int('1' + '0' * number_of_zeros):,d}")
 
 # Example for formatting a float
-st.subheader("Formatting a float")
+st.subheader("3.5.2: Formatting a float")
 number_of_decimals = st.slider("Enter the number of decimal places to show:", min_value=0, max_value=10, value=2, step=1, key="print_q11")
 
 # Code block

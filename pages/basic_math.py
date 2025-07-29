@@ -1,10 +1,10 @@
 import streamlit as st
 
-st.header("Basic Math Operations")
+st.title("4: Basic Math Operations")
 st.markdown("-" * 20)
 
 # Introduction
-st.header("Introduction")
+st.header("4.1: Overview")
 st.markdown("""
             Python supports the primary four math operations. The table below shows how they are written in Python:
             """)
@@ -50,7 +50,7 @@ st.markdown("""
 st.markdown("-" * 20)
 
 # Using math operations
-st.header("Using math operations")
+st.header("4.2: Using math operations")
 st.markdown("""
             It's pretty easy to actually use these operations. Just type the expressions out as you would in a calculator, and assign the result to a variable or a function. For example, if we want to add `1` and `2`, we can do the following:
 
@@ -110,7 +110,7 @@ elif len(user_answer) > 0:
 st.markdown("-" * 20)
 
 # Data types
-st.header("Rules regarding math with certain data types")
+st.header("4.3: Rules regarding math with certain data types")
 st.markdown("""
             Now although these operations are very flexible, there are certain rules that need to be remembered. These rules are important to know because they will help you avoid errors and understand the behavior of your code:
 
@@ -119,7 +119,7 @@ st.markdown("""
             - Certain math operations *always* return a `float` (in this case, just normal division)
             """)
 
-st.subheader("Math with Strings")
+st.subheader("4.3.1: Math with Strings")
 st.markdown("""
             Strings can be thought of just a sequence of characters. It would make logical sense that you can combine two strings together to make a larger string. This is actually possible! This process is called **concatenation**. You just add the two strings together with a `+` sign between them:
 
@@ -141,7 +141,7 @@ st.markdown("""
             The output is `HelloHelloHello`, and the string `\"Hello\"` is repeated three times. None of the other math operations are supported with strings. Also note that doing a number times a string or a string times a number will have the same result (e.g. `3 * "Hello"` and `"Hello" * 3` both give `HelloHelloHello`).
             """)
 
-st.subheader("The power of `float`")
+st.subheader("4.3.2: The power of `float`")
 st.markdown("""
             To simplify things, `float` is just more flexible than `int`. Remember, if you convert a `float` to an `int`, you will lose the decimal part (e.g `int(1.5)` is `1`). However, if you convert an `int` to a `float`, you will not lose any information. In fact, you gain some information (i.e. the decimal part is added). This means, if math is done with both `int`s and `float`s, the final result will be a `float` to ensure that no information is lost. The rule of thumb is that if you are doing math with a `float`, the final result will be a `float` no matter how many `int`s you have in the expression. Of course, this means, if there are no `float`s in the expression, the final result will be an `int`.
 

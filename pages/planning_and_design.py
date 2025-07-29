@@ -1,10 +1,10 @@
 import streamlit as st
 
-st.title("Planning and Design")
+st.title("6: Planning and Design")
 st.markdown("---")
 
 # Introduction
-st.header("Introduction")
+st.header("6.1: Introduction")
 st.markdown("""
             The most challenging aspect of programming is translating abstract human ideas into precise instructions that a computer can execute. As humans, we naturally interpret meaning and context from information, adapting our understanding based on nuance and implications. Computers, however, cannot interpret or contextualize: they simply follow instructions exactly as given, regardless of whether those instructions accomplish what we intended.
 
@@ -18,7 +18,7 @@ st.markdown("""
 st.markdown("---")
 
 # Planning
-st.header("Input, Processing, and Output")
+st.header("6.2: Input, Processing, and Output")
 st.markdown("""
             It is my belief that planning and design is a very personal process. Even though there are general guidelines that can be followed, the details of how you plan and design are more than likely determined by your own personal style and preferences. Here, I will introduce my personal process of planning and design. Feel free to adapt any or all of this as necessary.
 
@@ -34,7 +34,7 @@ st.markdown("""
 st.markdown("---")
 
 # Input
-st.header("Input")
+st.subheader("6.2.1: Input")
 st.markdown("""
             The input is the information that the user provides to the program. There are three main parts to input: receiving, sanitizing, and storing.
 
@@ -46,7 +46,7 @@ st.markdown("""
             """)
 st.markdown("---")
 
-st.header("Output")
+st.subheader("6.2.2: Output")
 st.markdown("""
             It may be weird that I actually plan the output before processing. But, through personal experience, I found that it is much harder to ensure that the output format is compatible with what I have planned for processing than to ensure the processing is capable of generating the output format. Anyways, output really is just answering two questions: what results need to be displayed and how will they be displayed.
 
@@ -55,7 +55,7 @@ st.markdown("""
 st.markdown("---")
 
 # Processing
-st.header("Processing")
+st.subheader("6.2.3: Processing")
 st.markdown("""
             Processing is all about what the program needs to do with the input. I always say that processing is threefold:
             - How would I normally use the input information to generate the output if I were to do it myself?
@@ -76,7 +76,7 @@ st.markdown("""
 st.markdown("---")
 
 # Summary
-st.header("Final Thoughts")
+st.header("6.3: Final Thoughts")
 st.markdown("""
             Sometimes, planning isn't even necessary. Simple enough programs (for your skill level) can be written without any or much planning due to your experience and knowledge of the language. However, as the projects become more complex (in size or in difficulty), planning becomes more and more important. Sometimes, you can get away with planning in your head, but it probably will get to a point where it's best to write down and draw out your thoughts and ideas.
 

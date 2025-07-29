@@ -1,16 +1,16 @@
 import streamlit as st
 
-st.title("Functions")
+st.title("8: Functions")
 st.markdown("---")
 
-st.header("Introduction")
+st.header("8.1: Introduction")
 st.markdown("""
             Functions are a way to group re-usable code together. It's kinda of like a template of code that you can use over and over again. They're also core to a lot of programming ideaologies like object-oriented programming and functional programming. Also, a lot of other languages just naturally use functions (or methods), so learning about functions will also help you learn other langauges.
             """)
 
 st.markdown("---")
 
-st.header("Function Structure")
+st.header("8.2: Function Structure")
 st.markdown("""
             To define a function, you use the `def` keyword. Then, you give the function a name, and then you put the code you want to run inside the function in a code block.
 
@@ -45,7 +45,7 @@ elif user_answer is not None:
 st.markdown("---")
 
 # Talk more about the definition, specifically parameters
-st.header("Parameters")
+st.header("8.3: Parameters")
 st.markdown("""
             Consider a function to be like a recipe. It has a list of ingredients and a list of steps to follow. It can be said that the list of steps is the function body. But what about the ingredients? Before I answer that, let's discuss a bit more about what the ingredients really represent. For a recipe, the ingredients are what the chef deems necessary to make the dish. However, what you use for those ingredients is up to you, as long as they're the same type. If you're asking to get chicken eggs, the branding of the chicken eggs doesn't really matter since in the end, you're still using chicken eggs. So, the ingredients define the types of "inputs" that you need in order to follow the instructions correctly. If you miss an ingredient or get the wrong type of ingredient, the recipe won't work and might actually be dangerous.
 
@@ -75,7 +75,7 @@ elif user_answer is not None:
 st.markdown("---")
 
 # Talk about calling functions
-st.header("Calling Functions")
+st.header("8.4: Calling Functions")
 st.markdown("""
             To call a function, you just need to use the function name with the parentheses. Using the `add_three_numbers` function from the previous section, you could call it like this:
 
@@ -129,7 +129,7 @@ elif user_answer is not None:
 st.markdown("---")
 
 # Scope
-st.header("Scope")
+st.header("8.5: Scope")
 st.markdown("""
             So far, before functions were introduced, variables you created could essentially be accessible everywhere. We call these variables global variables.
 
@@ -194,7 +194,7 @@ elif user_answer is not None:
 st.markdown("---")
 
 # Talk about return statements
-st.header("Return Statements")
+st.header("8.6: Return Statements")
 st.markdown("""
             Ok, well with scope, one major issue arises: what if I want to still do something with a value that only exists within the function? If I can't access it outside of the function, how can I use it? I can just return it. Literally. The `return` keyword allows the function call to *store* a value that can be assigned to a variable for future usage. Let's rewrite the original `add_three_numbers` function to return the sum of the three numbers:
 
