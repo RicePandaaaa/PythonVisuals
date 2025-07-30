@@ -19,6 +19,7 @@ st.markdown("""
             - 07\. Conditionals
             - 08\. Functions
             - 09\. Loops
+            - 10\. Lists
             """,)
 st.markdown("---")
 
